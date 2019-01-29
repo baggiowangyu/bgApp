@@ -200,12 +200,14 @@ void CbgFileDecryptDlg::OnDropFiles(HDROP hDropInfo)
 	// 如果线程在工作中，则不处理文件拖动
 	if (!decrypt_thread_.isRunning())
 	{
-		//取得被拖动文件的数目
+		m_cFileList.DeleteAllItems();
+
+		// 取得被拖动文件的数目
 		int total_drop_count = DragQueryFile(hDropInfo, -1, NULL, 0);
 
 		for(int index = 0; index < total_drop_count; ++index)
 		{
-			//获得拖曳的第i个文件的文件名
+			// 获得拖曳的第i个文件的文件名
 			TCHAR wcStr[MAX_PATH] = {0};
 			DragQueryFile(hDropInfo, index, wcStr, MAX_PATH);
 
@@ -213,7 +215,7 @@ void CbgFileDecryptDlg::OnDropFiles(HDROP hDropInfo)
 			m_cFileList.InsertItem(count, wcStr);
 		} 
 
-		//拖放结束后,释放内存
+		// 拖放结束后,释放内存
 		DragFinish(hDropInfo);
 	}
 

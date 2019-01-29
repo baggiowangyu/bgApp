@@ -95,6 +95,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="XCOPY /D $(SolutionDir)ext\GmSSL\bin\libcrypto-1_1.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\libssl-1_1.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\Poco\bin\PocoFoundationd.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcp120.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcr120.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcp90.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcr90.dll $(OutDir)"
 			/>
 		</Configuration>
 		<Configuration
@@ -181,6 +182,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="XCOPY /D $(SolutionDir)ext\GmSSL\bin\libcrypto-1_1.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\libssl-1_1.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\Poco\bin\PocoFoundation.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcp120.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcr120.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcp90.dll $(OutDir)&#x0D;&#x0A;XCOPY /D $(SolutionDir)ext\GmSSL\bin\msvcr90.dll $(OutDir)"
 			/>
 		</Configuration>
 	</Configurations>

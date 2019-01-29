@@ -208,6 +208,9 @@ void CbgFileEncryptDlg::OnDropFiles(HDROP hDropInfo)
 	// 如果线程在工作中，则不处理文件拖动
 	if (!encrypt_thread_.isRunning())
 	{
+		// 清理历史记录
+		m_cFileList.DeleteAllItems();
+
 		//取得被拖动文件的数目
 		int total_drop_count = DragQueryFile(hDropInfo, -1, NULL, 0);
 
