@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgApp", "bgApp\bgApp.vcproj", "{7E3CDD1D-7F1F-4CC8-8395-CA18C724F1E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. 文档加解密", "01. 文档加解密", "{593789A4-845F-4875-A728-89AEE9B689ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgFileEncrypt", "bgFileEncrypt\bgFileEncrypt.vcproj", "{44DA154A-51B2-41C1-8362-85B2DAFAB8F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgFileDecrypt", "bgFileDecrypt\bgFileDecrypt.vcproj", "{40395703-ABF0-4506-B0E0-989D260EA105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E3CDD1D-7F1F-4CC8-8395-CA18C724F1E7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E3CDD1D-7F1F-4CC8-8395-CA18C724F1E7}.Debug|Win32.Build.0 = Debug|Win32
+		{7E3CDD1D-7F1F-4CC8-8395-CA18C724F1E7}.Release|Win32.ActiveCfg = Release|Win32
+		{7E3CDD1D-7F1F-4CC8-8395-CA18C724F1E7}.Release|Win32.Build.0 = Release|Win32
+		{44DA154A-51B2-41C1-8362-85B2DAFAB8F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44DA154A-51B2-41C1-8362-85B2DAFAB8F1}.Debug|Win32.Build.0 = Debug|Win32
+		{44DA154A-51B2-41C1-8362-85B2DAFAB8F1}.Release|Win32.ActiveCfg = Release|Win32
+		{44DA154A-51B2-41C1-8362-85B2DAFAB8F1}.Release|Win32.Build.0 = Release|Win32
+		{40395703-ABF0-4506-B0E0-989D260EA105}.Debug|Win32.ActiveCfg = Debug|Win32
+		{40395703-ABF0-4506-B0E0-989D260EA105}.Debug|Win32.Build.0 = Debug|Win32
+		{40395703-ABF0-4506-B0E0-989D260EA105}.Release|Win32.ActiveCfg = Release|Win32
+		{40395703-ABF0-4506-B0E0-989D260EA105}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44DA154A-51B2-41C1-8362-85B2DAFAB8F1} = {593789A4-845F-4875-A728-89AEE9B689ED}
+		{40395703-ABF0-4506-B0E0-989D260EA105} = {593789A4-845F-4875-A728-89AEE9B689ED}
+	EndGlobalSection
+EndGlobal
