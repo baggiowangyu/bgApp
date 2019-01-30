@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgFileEncrypt", "bgFileEncr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgFileDecrypt", "bgFileDecrypt\bgFileDecrypt.vcproj", "{40395703-ABF0-4506-B0E0-989D260EA105}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. 基于OpenCV的人脸识别", "02. 基于OpenCV的人脸识别", "{BC92E422-3EB6-4CA1-A519-553BC1DE263A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
