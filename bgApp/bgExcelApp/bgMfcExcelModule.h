@@ -26,7 +26,7 @@ public:
 public:
 	int ReadInitialize(const wchar_t *xls_path, const wchar_t *sheet_name);
 	int ReadHeader(std::vector<std::wstring> &headers);
-	int ReadLine(std::vector<std::wstring> &rows);
+	int ReadNextLine(std::vector<std::wstring> &rows);
 	void ReadFinish();
 
 private:

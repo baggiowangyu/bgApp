@@ -6,6 +6,8 @@
 #include "bgExcelApp.h"
 #include "bgExcelAppDlg.h"
 
+#include "bgMfcExcelModule.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -63,6 +65,7 @@ BEGIN_MESSAGE_MAP(CbgExcelAppDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BUTTON1, &CbgExcelAppDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -151,3 +154,62 @@ HCURSOR CbgExcelAppDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CbgExcelAppDlg::OnBnClickedButton1()
+{
+	std::vector<std::wstring> header;
+	header.push_back(L"设备ID");
+	header.push_back(L"设备名称");
+	header.push_back(L"设备厂商");
+	header.push_back(L"设备门类");
+	header.push_back(L"连接信息");
+	header.push_back(L"配置版本");
+	header.push_back(L"用户名称");
+	header.push_back(L"用户密码");
+	header.push_back(L"设备编号");
+	header.push_back(L"扩展信息");
+	header.push_back(L"国标编码");
+	header.push_back(L"缩写名称");
+	header.push_back(L"设备版本");
+	header.push_back(L"所属网关");
+
+	std::vector<std::wstring> item;
+	item.push_back(L"100001");
+	item.push_back(L"高新兴4G执法记录仪");
+	item.push_back(L"高新兴国迈");
+	item.push_back(L"执法记录仪");
+	item.push_back(L"conn:[][][]");
+	item.push_back(L"1");
+	item.push_back(L"admin");
+	item.push_back(L"admin");
+	item.push_back(L"100001");
+	item.push_back(L"扩展A");
+	item.push_back(L"44000000001320000001");
+	item.push_back(L"aaa");
+	item.push_back(L"V1");
+	item.push_back(L"600001");
+
+	bgMfcExcelModule excel;
+
+	excel.WriteInitialize(L"D:\\设备信息表.xlsx", L"设备表");
+	excel.WriteHeader(header);
+	excel.WriteLine(item);
+	excel.WriteFinish();
+
+	std::vector<std::wstring> read_header;
+	excel.ReadInitialize(L"D:\\设备信息表.xlsx", L"设备表");
+	excel.ReadHeader(read_header);
+
+	while (true)
+	{
+		std::vector<std::wstring> read_item;
+		int errCode = excel.ReadNextLine(read_item);
+		if (errCode != 0)
+		{
+			break;
+		}
+	}
+
+	excel.ReadFinish();
+	
+}

@@ -332,7 +332,7 @@ public:
 		InvokeHelper(0x21f, DISPATCH_PROPERTYGET, VT_DISPATCH, (void*)&result, NULL);
 		return result;
 	}
-	VARIANT DialogBox()
+	VARIANT _DialogBox()
 	{
 		VARIANT result;
 		InvokeHelper(0xf5, DISPATCH_METHOD, VT_VARIANT, (void*)&result, NULL);
