@@ -196,20 +196,20 @@ void CbgExcelAppDlg::OnBnClickedButton1()
 	excel.WriteLine(item);
 	excel.WriteFinish();
 
-	std::vector<std::wstring> read_header;
-	excel.ReadInitialize(L"D:\\设备信息表.xlsx", L"设备表");
-	excel.ReadHeader(read_header);
+	//std::vector<std::wstring> read_header;
+	//excel.ReadInitialize(L"D:\\设备信息表.xlsx", L"设备表");
+	//excel.ReadHeader(read_header);
 
-	while (true)
-	{
-		std::vector<std::wstring> read_item;
-		int errCode = excel.ReadNextLine(read_item);
-		if (errCode != 0)
-		{
-			break;
-		}
-	}
+	//while (true)
+	//{
+	//	std::vector<std::wstring> read_item;
+	//	int errCode = excel.ReadNextLine(read_item);
+	//	if (errCode != 0)
+	//	{
+	//		break;
+	//	}
+	//}
 
-	excel.ReadFinish();
+	//excel.ReadFinish();
 	
 }
